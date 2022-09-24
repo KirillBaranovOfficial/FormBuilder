@@ -37,5 +37,3 @@ const updateModelValue = (modelPath: string, value: any) => {
   emit("update:modelValue", proxyModel);
 };
 </script>
-
-<style lang="scss" scoped></style>
