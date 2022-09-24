@@ -28,13 +28,13 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(["update:modelValue"]);
+const emit = defineEmits(["update:modelValue"]);
 
 const updateModelValue = (modelPath: string, value: any) => {
   const proxyModel = _.cloneDeep(props.model);
   _.set(proxyModel, modelPath, value);
 
-  emits("update:modelValue", proxyModel);
+  emit("update:modelValue", proxyModel);
 };
 </script>
 
