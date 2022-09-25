@@ -1,5 +1,5 @@
 <template>
-  <form class="form-builder">
+  <form class="form-builder" role="form">
     <FormLevel
       v-for="level in schema"
       :level="level"
@@ -11,10 +11,10 @@
 
 <script lang="ts" setup>
 import type { PropType } from "vue";
-import type { Schema } from "@/components/core/FormBuilder/Schema/schema";
-import type { Model } from "@/components/core/FormBuilder/Model/types";
 
-import FormLevel from "@/components/core/FormBuilder/FormLevel/FormLevel.vue";
+import type { Model, Schema } from "@/components/core/FormBuilder/types";
+
+import FormLevel from "@/components/core/FormBuilder/Blocks/FormLevel/FormLevel.vue";
 import _ from "lodash";
 
 const props = defineProps({
