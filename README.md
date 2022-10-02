@@ -21,7 +21,9 @@
 ### Recommendations
 - Keep all `schemas` in `schemas folder`
 
+### Changelog
 
+### Plans
 
 ## Project setup for contributors
 
