@@ -8,6 +8,12 @@ type AllChildrenVariants =
   | Array<AllFieldVariants[] | Level[]>
   | Level[];
 
+interface LevelHeader {
+  title: string;
+  class?: string | string[];
+  template?: string;
+}
+
 export interface Level {
   /**
    * Service field
@@ -23,6 +29,8 @@ export interface Level {
    * Css class for level block
    */
   class?: string | string[];
+
+  header?: LevelHeader;
 
   /**
    * Children nodes
