@@ -1,6 +1,6 @@
 # FormBuilder
 
-## Intro
+## Introduction
 
 > **FormBuilder** - easy way for creating custom forms
 
@@ -20,6 +20,8 @@
 
 ### Recommendations
 - Keep all `schemas` in `schemas folder`
+
+
 
 ## Project setup for contributors
 
