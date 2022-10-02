@@ -1,7 +1,7 @@
 import type { Field } from "@/components/core/FormBuilder/Blocks/FormField/types";
 import type { BuildAllWidgets } from "@/components/core/FormBuilder/Widgets/widgets";
 
-type AllFieldVariants = Field<BuildAllWidgets>;
+export type AllFieldVariants = Field<BuildAllWidgets>;
 
 type AllChildrenVariants =
   | AllFieldVariants[]
