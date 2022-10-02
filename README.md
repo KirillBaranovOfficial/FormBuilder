@@ -18,6 +18,9 @@
 3. Create and pass `schema` in `FormBuilder`
 4. (**Optional**) if required - create and pass `extraModel` in `FormBuilder`
 
+### Recommendations
+- Keep all `schemas` in `schemas folder`
+
 ## Project setup for contributors
 
 ### Recommended IDE Setup
