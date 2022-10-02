@@ -12,6 +12,12 @@
    1. Go to `FormBuilder/Blocks/FormField/FormField.vue`
    2. Edit `widgetProps` as u wish (For example you can add condition for specific widget type and pass special values)
 
+### Usage
+1. Add `FormBuilder` component to your page
+2. Create and pass `model` in `FormBuilder` 
+3. Create and pass `schema` in `FormBuilder`
+4. (**Optional**) if required - create and pass `extraModel` in `FormBuilder`
+
 ## Project setup for contributors
 
 ### Recommended IDE Setup
