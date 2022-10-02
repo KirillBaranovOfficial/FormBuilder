@@ -12,7 +12,11 @@
 <script lang="ts" setup>
 import type { PropType } from "vue";
 
-import type { Model, Schema } from "@/components/core/FormBuilder/types";
+import type {
+  ExtraModel,
+  Model,
+  Schema,
+} from "@/components/core/FormBuilder/types";
 
 import FormLevel from "@/components/core/FormBuilder/Blocks/FormLevel/FormLevel.vue";
 import _ from "lodash";
@@ -25,6 +29,10 @@ const props = defineProps({
   model: {
     type: Object as PropType<Model>,
     required: true,
+  },
+  extraModel: {
+    type: Object as PropType<ExtraModel>,
+    default: () => ({}),
   },
 });
 
