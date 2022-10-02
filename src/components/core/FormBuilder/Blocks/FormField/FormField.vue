@@ -1,5 +1,5 @@
 <template>
-  <div class="form-field">
+  <div class="form-field" :class="fieldClasses">
     <Component
       :is="renderWidget"
       v-model="proxyModelValue"
@@ -46,6 +46,10 @@ const proxyModelValue = computed({
       value: next,
     }),
 });
+
+const fieldClasses: ComputedRef<string | string[] | undefined> = computed(
+  () => props.field.class
+);
 
 const renderWidget = computed(() =>
   getComponentByWidgetType(props.field.widget.type)
