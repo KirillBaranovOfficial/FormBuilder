@@ -2,7 +2,7 @@
 
 ## Intro
 
-> **FormBuilder** is an easy way for creating custom forms
+> **FormBuilder** - easy way for creating custom forms
 
 ### Creating custom widget
 1. Create file in `FormBuilder/Widgets` with widget name
