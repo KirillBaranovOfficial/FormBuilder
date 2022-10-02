@@ -27,12 +27,6 @@ export interface Field<T> {
   widget: Widget<T>;
 
   /**
-   * Special property that using with backend forms.
-   * Should update the schema after updating the field value?
-   */
-  isAffectingDocumentStructure?: boolean;
-
-  /**
    * Post-processing field
    * This function called once only when u use postProcessModel in builder
    * $refs.builder.postProcessModel() will return new processed model
