@@ -1,11 +1,24 @@
 # FormBuilder
 
-## Recommended IDE Setup
+## Intro
+
+> **FormBuilder** is an easy way for creating custom forms
+
+### Creating custom widget
+1. Create file in `FormBuilder/Widgets` with widget name
+2. Create interface with required and optional params
+3. Open `FormBuilder/Config/config.ts` and add your widget in config
+4. **(Optional)** if your widget require custom values/fields/context etc:
+   1. Go to `FormBuilder/Blocks/FormField/FormField.vue`
+   2. Edit `widgetProps` as u wish (For example you can add condition for specific widget type and pass special values)
+
+## Project setup for contributors
+
+### Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Project Setup
-
+### Install required packages
 ```sh
 yarn
 ```
