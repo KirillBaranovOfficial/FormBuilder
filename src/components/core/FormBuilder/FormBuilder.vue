@@ -18,6 +18,7 @@ import type {
   ExtraModel,
   Model,
   Schema,
+  UpdateModelValuePayload,
 } from "@/components/core/FormBuilder/types";
 
 import FormLevel from "@/components/core/FormBuilder/Blocks/FormLevel/FormLevel.vue";
@@ -40,7 +41,7 @@ const props = defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-const updateModelValue = (modelPath: string, value: any) => {
+const updateModelValue = ({ modelPath, value }: UpdateModelValuePayload) => {
   const proxyModel = _.cloneDeep(props.modelValue);
   _.set(proxyModel, modelPath, value);
 
