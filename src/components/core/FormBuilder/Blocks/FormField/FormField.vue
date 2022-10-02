@@ -2,9 +2,8 @@
   <div class="form-field">
     <Component
       :is="renderWidget"
-      :modelValue="modelValue"
+      v-model="proxyModelValue"
       v-bind="widgetProps"
-      @updateModelValue="updateModelValue"
     />
   </div>
 </template>
@@ -19,7 +18,6 @@ import type { ExtraModel, Model } from "@/components/core/FormBuilder/types";
 import _ from "lodash";
 
 import { getComponentByWidgetType } from "@/components/core/FormBuilder/Blocks/FormField/helpers";
-import type { BuildAllWidgets } from "@/components/core/FormBuilder/Widgets/widgets";
 
 const props = defineProps({
   field: {
@@ -39,7 +37,16 @@ const props = defineProps({
 const emit = defineEmits(["updateModelValue"]);
 
 const modelPath = computed(() => props.field.modelPath);
-const modelValue = computed(() => _.get(props.model, modelPath.value));
+
+const proxyModelValue = computed({
+  get: () => _.get(props.model, modelPath.value),
+  set: (next: any) =>
+    emit("updateModelValue", {
+      modelPath: modelPath.value,
+      value: next,
+    }),
+});
+
 const renderWidget = computed(() =>
   getComponentByWidgetType(props.field.widget.type)
 );
@@ -47,14 +54,7 @@ const renderWidget = computed(() =>
 /**
  * @TODO: Make support passing context/extraModel in widget component.
  */
-const widgetProps: ComputedRef<BuildAllWidgets> = computed(() => ({
+const widgetProps: ComputedRef<Record<string, any>> = computed(() => ({
   ...props.field.widget,
 }));
-
-const updateModelValue = (value: any) => {
-  emit("updateModelValue", {
-    modelPath,
-    value,
-  });
-};
 </script>
