@@ -22,8 +22,11 @@
 - Keep all `schemas` in `schemas folder`
 
 ### Changelog
+- See full changelog in [releases](https://github.com/KirillBaranovOfficial/FormBuilder/releases)
 
 ### Plans
+- Add validation
+- Add branches
 
 ## Project setup for contributors
 
